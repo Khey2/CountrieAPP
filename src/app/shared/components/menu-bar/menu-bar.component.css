@@ -1,0 +1,56 @@
+P{
+    font-size: 15px;
+    font-weight: 300px;
+    text-transform: uppercase;
+}
+
+#fullstack{
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#menu p a{
+    font-size: 16px;
+    margin-right: 30px;
+    font-weight: 300px;
+    text-transform: uppercase;
+    color: rgba(26, 25, 25, 0.8);
+    transition: 100ms linear;
+}
+#menu p a{
+    text-decoration: none;
+}
+#menu p a:hover{
+    cursor: pointer;
+    color: black;
+    font-size: 18px;
+}
+
+#menu-container{
+    padding-top: 10px;
+    background-color: rgb(255, 255, 255);
+    min-height: 75px;
+}
+
+/* Img */
+#img-container{
+    margin-left: 12px;
+}
+
+img{
+
+    width: 50px;
+    border-radius: 150px;
+
+    object-fit: cover; /* Hace que la imagen ocupe todo el contenedor sin deformarse */
+    object-position: top; /* Mueve la imagen al centro del eje x y al fondo del eje y */
+}
+
+
+@media screen and (max-width: 723px){
+    #img-container{
+        display: none;
+    }
+}

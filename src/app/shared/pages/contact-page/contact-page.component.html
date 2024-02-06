@@ -1,0 +1,62 @@
+
+    <div id="containerGeneral"  class="grid mt-5 p-3">
+           <div class="col-12 sm:col-12 md:col-12 xl:col-3">
+                <!-- <img src="../../../../assets/icons/imgContact.jpeg" id="imgContact"> -->
+                <h2>Contacto</h2>
+                <p class="mt-2 mb-3">Si te interesan mis habilidades adjunta
+                     tu informacion en el formulario y me comunicare contigo
+                      a la brevedad! estare encantado de trabajar contigo.</p>
+           </div>
+           <div class="col-12 sm:col-12 md:col-12 xl:col-9">
+            
+            <form class="flex flex-column" id="form-container"
+                [formGroup]="formGroup" (ngSubmit)="enviarData()"
+            >
+                <span class="text-lg mb-4">Contacto</span>
+                <mat-form-field>
+                    <mat-label>Nombre</mat-label>
+                    <input formControlName="name" type="text" matInput placeholder="Nombre Completo">
+                    
+                </mat-form-field>
+                <span *ngIf="isValidField('name')" 
+                    class="errorMessage">
+                    {{getFieldError('name')}}
+                </span>
+                
+                
+                <mat-form-field>
+                    <mat-label>Edad</mat-label>
+                    <input formControlName="edad" type="number" matInput placeholder="edad">
+                </mat-form-field>
+
+                <span *ngIf="isValidField('edad')" 
+                class="errorMessage">
+                    La edad debe ser 15 o mayor
+                </span>
+
+                <mat-form-field>
+                    <mat-label>Correo de contacto</mat-label>
+                    <input formControlName="email" type="email" matInput placeholder="Correo">
+                </mat-form-field>
+                <span *ngIf="isValidField('email')" 
+                class="errorMessage">
+                    Ingresa un email valido
+                </span>
+                   
+                <mat-form-field>
+                    <mat-label>Mensaje</mat-label>
+                    <textarea formControlName="mensaje" type="text" matInput placeholder="Deja tu mensaje"></textarea>
+                </mat-form-field>
+                <span *ngIf="isValidField('mensaje')" 
+                    class="errorMessage">
+                    {{getFieldError('mensaje')}}
+                </span>
+                
+                <button mat-button mat-flat-button color="primary">
+                    <mat-icon>send</mat-icon>
+                    Enviar
+                </button>
+               
+            </form>
+           </div>
+    </div>  

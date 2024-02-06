@@ -1,0 +1,33 @@
+#information{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+}
+
+#verBtn{
+
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+#verBtn button{
+
+    width: 100%;
+
+}
+
+#descripccion{
+    line-height: 25px;
+}
+
+#generalContainer{
+    animation: in 1s  ease
+}
+
+@keyframes in {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }

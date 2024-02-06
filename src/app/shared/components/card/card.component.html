@@ -1,0 +1,28 @@
+<div >
+    <p-card id="pcard" [header]="project.title" [subheader]="project.title" >
+        <ng-template pTemplate="header">
+            <!-- Img project preview -->
+
+        </ng-template>
+        <p>
+            Red social con sistema de login a base de JWT
+        </p>
+        <mat-divider class="mt-2 mb-3"></mat-divider>
+
+        <div class="tags">
+            <p-tag class="m-1" [style]="tag.estilo"  *ngFor="let tag of project.tecnologias">
+                <div class="flex flex-row">
+                    <img alt="Country"  [src]="tag.src" class="flag flag-it" [style]="{width: '18px'}" />
+                    <span class="text-base ml-1">{{tag.tecnologia}}</span>
+                </div>
+            </p-tag>
+        </div>
+        
+        
+
+        <div class="btns-card">
+            <p-button icon="pi pi-plus" (click)="moreInformation()" severity="success"></p-button>
+            <p-button  icon="pi pi-eye"></p-button>
+        </div>
+    </p-card>
+</div>

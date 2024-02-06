@@ -1,0 +1,58 @@
+
+<div class="grid mt-3 p-3">
+    <div class="col-12 sm:col-12 md:col-3 xl:col-2 mt-3 ">
+    
+    <!-- Menu filtro -->
+    <h3 class="mb-3 mt-3">Tecnologias</h3>
+        <div id="checkboxes">
+            <div  *ngFor="let tecnologia of tecnologias; let i = index" class="field-checkbox ml-2">
+                <input id="tecnologiasC" type="checkbox" [(ngModel)]="tecnologia.isSelected"  (click)="filtro(i, $event)" 
+        
+                >
+                <span>{{tecnologia.name}}</span>
+        
+        
+                <!-- <p-checkbox (click)="filtro( $event,tecnologia.name)" [label]="tecnologia.name" name="group" [value]="tecnologia" ></p-checkbox> -->
+            </div>  
+        </div>
+     <!-- buscador -->
+     <div class="flex flex-column p-2 mt-6">
+        <h3>Buscador</h3>
+        <mat-form-field>
+            <mat-label> Buscador de heroes</mat-label>
+            <input type="text"
+                matInput
+                id="buscador"
+                [formControl]="searchInput"
+                (input)="searchProject()"
+                [matAutocomplete]="auto"
+            >   
+        </mat-form-field>
+
+        <mat-autocomplete 
+        autoActiveFirstOption #auto="matAutocomplete"
+        (optionSelected)="oneSelectedOption($event)"
+        >
+            <mat-option *ngFor="let option of projects" [value]="option.title">
+                {{option.title}}
+            </mat-option>
+            <mat-option value=""
+            *ngIf="projects.length === 0 && searchInput.value && searchInput.value.length > 0"
+            >
+                No se encontro nada con el termino {{ searchInput.value }}
+            </mat-option>
+        </mat-autocomplete>
+    </div>
+       
+    </div>
+    <div class="col-12 sm:col-12 md:col-9 xl:col-10">
+        <div class="grid">
+            <div *ngFor="let project of projects; let i = index"
+            class="col-12 sm:col-5 md:col-4 xl:col-3 mt-2"
+            >
+            <shared-project-card [indice]="project" [project]="project"></shared-project-card>
+        </div>
+        </div>
+    </div>
+</div>
+

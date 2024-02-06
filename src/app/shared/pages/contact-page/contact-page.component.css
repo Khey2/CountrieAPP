@@ -1,0 +1,45 @@
+.test{
+    border: 1px solid black;
+}
+
+.form{
+    border: 1px solid black;
+}
+
+#form-container{
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 25px;
+
+
+}
+
+#imgContact{
+    padding-top: 23px;
+    width: 100%;
+    height: 83%;
+    object-fit: cover;
+}
+
+#containerGeneral{
+    margin: 0 auto;
+    width: 86%;
+}
+
+#form-container button{
+    width: 50%;
+    margin: 0 auto;
+}
+
+#form-container mat-form-field{
+    margin-top: 15px;
+}   
+#form-container span{
+    margin-bottom: 20px;
+}
+
+.errorMessage{
+    color: red;
+    margin-bottom: 20px;
+}

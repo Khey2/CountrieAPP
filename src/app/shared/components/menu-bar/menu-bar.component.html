@@ -1,0 +1,13 @@
+<div id="menu-container" class="grid">
+    <div id="img-container"  class="col-12 justify-content-center sm:justify-content-center md:col-3 md:justify-content-start lg:col-3 flex align-items-center">
+     <!-- <img src="../../../../assets/perfil2.PNG"> 
+       <p id="fullstack" class="m-2 flex  justify-content-center">
+            Miguel Silva Rubio
+        </p>  -->
+    </div>
+    <div  id="menu" class="col-12 md:col-6 lg:col-6 justify-content-center flex flex-row">
+        <p *ngFor="let item of menuItems" class="m-2 flex  align-items-center justify-content-center">
+            <a [routerLink]="item.path">{{item.name}}</a>
+        </p>
+    </div>
+</div>

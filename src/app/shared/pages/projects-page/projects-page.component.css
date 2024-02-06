@@ -1,0 +1,22 @@
+#buscador{
+    width: 85%;
+}
+
+
+#tecnologiasC{
+  border: 1px solid black;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 765px) {
+    /* Estilos que se aplicarán si la pantalla es igual o menor a 600px de ancho */
+    #checkboxes {
+      display: flex !important;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
